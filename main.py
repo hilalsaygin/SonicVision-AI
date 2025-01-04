@@ -6,20 +6,20 @@ from torchvision import transforms as trn
 from torch.nn import functional as F
 from PIL import Image
 from io import BytesIO
+import sys
+import pygame
+import time
 import os
 import cv2
 import numpy as np
-import time
 from openai import OpenAI
 from dotenv import load_dotenv
 from pathlib import Path
-import sys
-import multiprocessing
 from pydub import AudioSegment
+from detect_obj.py import detect_and_extract
+from anlayze_scene import predict_place
 from pydub.playback import play
 
-import pygame
-import time
 
 
 load_dotenv()
@@ -76,11 +76,6 @@ def image_to_audio(img):
       
 def main():
 
-    # img_path = "./images/10815824_2997e03d76.jpg"
-    # if not os.access(img_path, os.W_OK):
-    #     img_url = 'http://places.csail.mit.edu/demo/' + img_path.split('/')[-1]
-    #     os.system('wget ' + img_url)
-
     # Initialize parser
     n = len(sys.argv)
     print("For input from library type in command line: -up <image path>")
@@ -96,8 +91,6 @@ def main():
                 os.system('wget ' + img_url)
             img = Image.open(img_path)
             img.show()
-            # print(type(img))
-
             image_to_audio(img)
             
     else: #if not specied take input from webcam
@@ -144,7 +137,6 @@ def main():
             else: 
                 
                 counter+=1
-        # Release the webcam and close the OpenCV windows
         cap.release()
         cv2.destroyAllWindows()
 
