@@ -5,5 +5,5 @@ echo "Activating the virtual environment..."
 source sv-env/bin/activate
 
 echo "Installing dependencies..."
-pip install torch torchvision torchaudio
+pip install numpy torch torchvision torchaudio
 pip install -r requirements.txt
