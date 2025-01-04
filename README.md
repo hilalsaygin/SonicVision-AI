@@ -1,6 +1,3 @@
-# SonicVision-AI
-
-
 
 # SonicVision-AI
 
@@ -12,6 +9,8 @@ SonicVision-AI is an advanced AI-driven project designed for real-time visual re
 - **Real-Time Video Processing**: The system captures and processes video frames for futher processing.
 - **Visual Recognition**: Implements visual recognition using state-of-the-art deep learning models.
 - **AI-Driven Interactions**: AI algorithms interact with coth images and live streaming video inputs for dynamic responses.
+- **YOLOv5 model**: Precise object detection withn positional information.
+- **Fine-tuning CNN deep leanring model for place prediction**: places356 dataset covering major scene categories. 
 
 ## Requirements
 To run this project, ensure you have the following installed:
@@ -32,6 +31,7 @@ Install the necessary Python libraries with pip:
 ```bash
 pip install -r requirements.txt
 ```
+Note that for scene analysis CNN-MODEL file path needs to be provided in .env file.
 
 ## Running the Application
 To start the application, simply run the `main.py` script:
