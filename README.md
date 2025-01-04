@@ -31,7 +31,7 @@ Install the necessary Python libraries with pip:
 ```bash
 pip install -r requirements.txt
 ```
-Note that for scene analysis CNN-MODEL file path needs to be provided in .env file.
+#### Note that for scene analysis CNN-MODEL file path needs to be provided in .env file.
 
 ## Running the Application
 To start the application, simply run the `main.py` script:
