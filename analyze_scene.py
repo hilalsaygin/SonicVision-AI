@@ -28,9 +28,11 @@ def predict_place(img):   # pass jpeg file for frames from video input
     
     arch = 'resnet18'
 
-    # load the rained weights
+    # load the moel and labels
     model_file = '%s_places365.pth.tar' % arch
-    
+    file_name = 'categories_places365.txt'
+
+
     model = models.__dict__[arch](num_classes=365)
     checkpoint = torch.load(model_file, map_location=lambda storage, loc: storage)
     state_dict = {str.replace(k,'module.',''): v for k,v in checkpoint['state_dict'].items()}
@@ -45,11 +47,6 @@ def predict_place(img):   # pass jpeg file for frames from video input
             trn.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ])
 
-    # load the class label
-    file_name = 'categories_places365.txt'
-    if not os.access(file_name, os.W_OK):
-        synset_url = 'https://raw.githubusercontent.com/csailvision/places365/master/categories_places365.txt'
-        os.system('wget ' + synset_url)
     classe_names = list()
     with open(file_name) as class_file:
         for line in class_file:
