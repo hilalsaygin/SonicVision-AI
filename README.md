@@ -1,2 +1,48 @@
 # SonicVision-AI
-Audio Description Generator to narrate Video contents using Deep Learning
+
+
+
+# SonicVision-AI
+
+## Overview
+SonicVision-AI is an advanced AI-driven project designed for real-time visual recognition and processing. An Audio Description Generator to narrate Video contents using Deep Learning.
+ The system is built to detect objects, and analyze the scene of the video input. It generates description pragraph to define currently captured frame including both relative position of objects to each other and the place the frame captured. The descripion is converted using text-to-speech AI modules. The surroundings described vocally.
+
+## Features
+- **Real-Time Video Processing**: The system captures and processes video frames for futher processing.
+- **Visual Recognition**: Implements visual recognition using state-of-the-art deep learning models.
+- **AI-Driven Interactions**: AI algorithms interact with coth images and live streaming video inputs for dynamic responses.
+
+## Requirements
+To run this project, ensure you have the following installed:
+- Python 3.x
+- Required Python libraries from `requirements.txt`
+- Audio and camera hardware for input
+
+## Installation
+
+### Clone the Repository
+```bash
+git clone ""
+cd SonicVision-AI
+```
+
+### Install Dependencies
+Install the necessary Python libraries with pip:
+```bash
+pip install -r requirements.txt
+```
+
+## Running the Application
+To start the application, simply run the `main.py` script:
+```bash
+python main.py
+```
+
+Ensure your environment is set up for audio and visual inputs.
+
+## Configuration
+You may need to configure hardware parameters in the `config.py` file to match your device's capabilities. This includes adjusting microphone and camera settings.
+
+## License
+This project is licensed under the MIT License.
