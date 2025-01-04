@@ -22,14 +22,15 @@ To run this project, ensure you have the following installed:
 
 ### Clone the Repository
 ```bash
-git clone ""
+git clone <repo-link>
 cd SonicVision-AI
 ```
 
 ### Install Dependencies
 Install the necessary Python libraries with pip:
 ```bash
-pip install -r requirements.txt
+chmod +x install.sh
+./install.sh
 ```
 #### Note that for scene analysis CNN-MODEL file path needs to be provided in .env file.
 
