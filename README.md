@@ -42,8 +42,5 @@ python main.py
 
 Ensure your environment is set up for audio and visual inputs.
 
-## Configuration
-You may need to configure hardware parameters in the `config.py` file to match your device's capabilities. This includes adjusting microphone and camera settings.
-
 ## License
 This project is licensed under the MIT License.
